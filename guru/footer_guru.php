@@ -1,0 +1,1 @@
+<?PHP mysqli_close($condb); ?>
