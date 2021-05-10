@@ -106,7 +106,7 @@ while($data = mysqli_fetch_array($laksana_cari_guru)){
     <td>
 | <a href = 'guru_kemaskini.php? ".http_build_query($data_guru)."'>Kemaskini</a>
 | <a href = 'padam.php?jadual=guru&medan=id_guru&id=".$data['id_guru']."'>Padam</a> |
-    /td>   
+    </td>   
 	</tr>";
 }
 ?>	
