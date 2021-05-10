@@ -86,7 +86,7 @@ if(!empty($_POST)){
 $arahan_cari_guru = "SELECT * from GURU order by tahap ASC";
 
 //melaksanakan arahan SQL diatas
-$laksana_cari_guru = sqli_query($condb , $arahan_cari_guru);
+$laksana_cari_guru = mysqli_query($condb , $arahan_cari_guru);
 
 //mengambil semua data yang ditemui 
 while($data = mysqli_fetch_array($laksana_cari_guru)){
