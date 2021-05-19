@@ -65,23 +65,24 @@ if (isset($_POST['btn-upload'])){
 			$jum_data++;
 		    $counter++;
 		}
-        fclose ($failyangdatainginupload)
+       fclose ($failyangdatainginupload);
 	}
-else 
-echo "<script>alert('Hanya fail csv sahaja dibenarkan');
-window.location.href = 'murid_senarai.php';</script>";
 
-//memaparkan popup bilangan data yang berjaya dikemaskini 
-if ($bil_berjaya > 0) {
+	else {
+		echo "<script>alert('Hanya fail csv sahaja dibenarkan');</script>";
+	}
 
-	echo "<script>alert('Import fail data selesai. $bil_berjaya data berjaya disimpan');
-	window.href.location = 'murid_senarai.php';</script>";
-}
-else {
+ 	//memaparkan popup bilangan data yang berjaya dikemaskini 
+ 	if ($bil_berjaya > 0) {
 
-	echo "<script>alert('Import fail GAGAL disimpan BOOOOOOO!!!');
-	window.location.href = 'murid_senarai.php';<";
-}
+		echo "<script>alert('Import fail data selesai. $bil_berjaya data berjaya disimpan');
+		window.href.location = 'murid_senarai.php';</script>";
+ 	}
+ 	else {
+
+		echo "<script>alert('Import fail GAGAL disimpan BOOOOOOO!!!');
+		window.location.href = 'murid_senarai.php';<";
+ 	}
 }
 ?> 
 
