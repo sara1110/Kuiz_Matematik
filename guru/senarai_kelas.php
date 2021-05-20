@@ -73,3 +73,90 @@ if (!empty ($_GET)) {
 	}
 }
 ?>
+
+<!-- ---------Bahagian untuk memaparkan senarai kelas dan guru---------- -->
+<h3>Senarai Kelas</h3>
+<?PHP include ('../butang_saiz.php'); ?>
+<table width = "100%" border = "1" id = "besar">
+	<tr>
+		<td>Tingkatan</td>
+		<td>Nama Kelas</td>
+		<td>Guru Subjek</td>
+		<td>Tukar Guru Baru</td>
+		<td>Tindakan</td>
+	</tr>
+<tr> 
+<!-- borang untuk mendaftar kelas baru -->
+<form name = "tambah_kelas" action =" " method = "POST">
+		<td><input type = "text" name = "tingkatan"></td>
+		<td><input type = "text" name = "nama_kelas"></td>
+		<td>
+			<select name = 'id_guru'>
+				<option value selected disable>Pilih</option>
+				<?PHP 
+				//arahan untuk mencari semua data dari jadual jenis_guru 
+				$sql = "select * from GURU";
+
+				//melaksanakan arahan mencari data 
+				$laksana_arahan_cari = mysqli_query ($condb , $sql);
+
+				//pembolehubah $rekod_guru mengambil data yang ditemui baris demi baris 
+				while ($rekod_guru = mysqli_fetch_array ($laksana_arahan_cari)) {
+
+					//memaparkan data yang ditemui dalam element <option></option>
+					echo "<option value = ".$rekod_guru['id_guru'].">".$rekod_guru['nama_guru']."</option>";
+				}
+				?>	
+			</select>
+		</td>
+		<td></td>
+		<td><input type = "submit" value = "Tambah Kelas Baru"></td>
+	</form>
+</tr>
+
+<?PHP 
+//arahan untuk mencari data yang sepadan dari jadual kelas dan guru 
+$arahan_cari_kelas = "select * from KELAS , GURU where KELAS.id_guru = GURU.id_guru order by nama_kelas ASC";
+
+//melaksanakan arahan untuk mencari data 
+$laksana_cari_kelas = mysqli_query ($condb , $arahan_cari_kelas);
+
+//pembolehubah $data mengambil data yang ditemui 
+while ($data = mysqli_fetch_array ($laksana_cari_kelas)) {
+
+	//memaparkan data baris demi baris 
+	echo "<tr>
+	       <td>".$data['tingkatan']."</td>
+	       <td>".$data['nama_kelas']."</td>
+	       <td>".$data['nama_guru']."</td>
+	       <td>
+	       <form action = " " method = 'GET'>
+	       <input type = 'hidden' name = 'id_kelas' value = '".$data['id_kelas']"'>
+	       <select name = 'id_guru_baru'>
+	        <option value selected disable>Pilih</option>";
+
+	    //arahan untuk mencari semua data dari jadual jenis_guru 
+	    $sql2 = "select * from GURU";
+
+	    //melaksanakan arahan mencari_data 
+	    $laksana_arahan_cari2 = mysqli_query ($condb , $sql2);
+
+	    //pembolehubah $rekod_guru mengambil data yang ditemui baris demi baris 
+	    while ($rekod_guru2 = mysqli_fetch_array ($condb , $laksana_arahan_cari2)) {
+
+	    	//memaparkan data yang ditemui dalam element <option></option>
+	    	echo "<option value = ".$rekod_guru2['id_guru']."> ".$rekod_guru2['nama_guru']."</option>";
+	    }
+
+	//memaparkan data yang ditemui dalam element <option></option>
+	    echo "</select><td>
+	     | <input type = 'submit' value = 'Kemaskini Guru Subjek'>
+
+	     |<button onclick =\"location.href='padam.php?jadual=KELAS&medan=id_kelas&id=".$data['id_kelas']."'\" type = 'button'>Padam Kelas</button>|
+	        </td>
+	    </tr>
+	</form> ";
+}
+?>
+</table>
+<?PHP include ('footer_guru.php'); ?>
