@@ -130,10 +130,10 @@ while ($data = mysqli_fetch_array ($laksana_cari_kelas)) {
 	       <td>".$data['nama_kelas']."</td>
 	       <td>".$data['nama_guru']."</td>
 	       <td>
-	       <form action = " " method = 'GET'>
-	       <input type = 'hidden' name = 'id_kelas' value = '".$data['id_kelas']"'>
+	       <form action = '' method = 'GET'>
+	       <input type = 'hidden' name = 'id_kelas' value = '".$data['id_kelas']."'>
 	       <select name = 'id_guru_baru'>
-	        <option value selected disable>Pilih</option>";
+	       			<option value selected disable>Pilih</option>";
 
 	    //arahan untuk mencari semua data dari jadual jenis_guru 
 	    $sql2 = "select * from GURU";
