@@ -8,7 +8,7 @@ error_reporting(E_ALL);
 ?>
 
 <!-- Tajuk Sistem -->
-<h1 align = 'centre' >Portal Kuiz Matematik</h1>
+<h1 align = 'centre' >Kuiz Matematik</h1>
 <hr>
 
 <!-- Menu Bahagian Murid -->
