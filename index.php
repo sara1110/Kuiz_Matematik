@@ -28,14 +28,6 @@ a {
   	 	<a href ='signup.php'>Daftar Murid Baharu</a>
   	 </td>
   	 <td>
-  	 <!-- Senarai set latihan terkini --> 
-  	 Senarai Latihan Terkini 
-  	 <table border = '1'>
-  	 <tr>
-  	 	<td>Topik</td>
-  	 	<td>Kelas</td>
-  	 	<td>Nama Guru</td>
-  	 </tr>
   	 <?php 
   	 //memanggil fail connection.php 
   	 include('connection.php');
