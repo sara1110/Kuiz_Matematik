@@ -6,7 +6,7 @@ session_start();
 if(empty($_POST['id']) or empty($_POST['katalaluan']) or empty($_POST['jenis']))
 {
 	//menghentikan aturcara jika jenis pengguna adalah pelajar
-	die("<script>alert('Sila masukkan id dan katalaluan.'));
+	die("<script>alert('Sila masukkan id dan katalaluan.');
 		window.location.href = 'index.php';");
 }
 
