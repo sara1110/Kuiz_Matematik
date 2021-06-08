@@ -26,38 +26,10 @@ a {
   	 	</form>
   	 	<!-- pautan untuk mendaftar murid baru -->
   	 	<a href ='signup.php'>Daftar Murid Baharu</a>
-  	 </td>
-  	 <td>
-  	 <?php 
-  	 //memanggil fail connection.php 
-  	 include('connection.php');
-
-  	 //arahan sql untuk mencari data set soalan yang terkini 
-  	 $arahan_latihan = "SELECT * FROM set_soalan , GURU , KELAS 
-  	 WHERE 
-  	       set_soalan.id_guru     =        GURU.id_guru
-  	 AND   KELAS.id_guru     =        GURU.id_guru
-  	 ORDER BY set_soalan.tarikh ASC ";
-
-  	 //melaksanakan arahan SQL di atas 
-  	 $laksana_latihan = mysqli_query($condb , $arahan_latihan);
-
-  	 //mengambil dan memaparkan senarai set soalan, tingkatan yang terlibat dan guru
-  	 while($rekod=mysqli_fetch_array($laksana_latihan))
-  	 {
-  	 	echo " <tr>
-  	 	     <td> ".$rekod['topik']."</td>
-  	 	     <td> ".$rekod['tingkatan']." ".$rekod['nama_kelas']." </td>
-  	 	     <td> ".$rekod['nama_guru']."</td>
-  	 	</tr> " ;
-  	 }
-  	 mysqli_close($condb);
-  	 ?>
-  	</table>
-  </td>
-</tr>
+  	 </td> 
+  </tr>
 </table>
-<? PHP 
+<?PHP 
 //memanggil fail footer.php 
 include ('footer.php')
 ?>

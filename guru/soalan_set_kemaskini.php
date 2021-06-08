@@ -72,15 +72,20 @@ if (!empty ($_POST)) {
 	<!-- Bahagian borang untuk mengemaskini soalan dan jawapan -->
 <form action = '' method = 'POST'>
 
-<td><textarea name = 'soalan' rows = "4" cols = "25"><?PHP echo $_GET['soalan']; ?></textarea></td>
+<td><textarea name = 'soalan' rows = "4" cols = "25">
+<?PHP echo $_GET['soalan']; ?></textarea></td>
 
-<td bgcolor = 'cyan'><textarea name = 'jawapan_a' rows = "4" cols = "25"><?PHP echo $_GET['jawapan_a']; ?></textarea></td>
+<td bgcolor = 'cyan'><textarea name = 'jawapan_a' rows = "4" cols = "25">
+<?PHP echo $_GET['jawapan_a']; ?></textarea></td>
 
-<td bgcolor = 'pink'><textarea name = 'jawapan_b' rows = "4" cols = "25"><?PHP echo $_GET['jawapan_b']; ?></textarea></td>
+<td bgcolor = 'pink'><textarea name = 'jawapan_b' rows = "4" cols = "25">
+<?PHP echo $_GET['jawapan_b']; ?></textarea></td>
 
-<td bgcolor = 'pink'><textarea name = 'jawapan_c' rows = "4" cols = "25"><?PHP echo $_GET['jawapan_c']; ?></textarea></td>
+<td bgcolor = 'pink'><textarea name = 'jawapan_c' rows = "4" cols = "25">
+<?PHP echo $_GET['jawapan_c']; ?></textarea></td>
 
-<td bgcolor = 'pink'><textarea name = 'jawapan_d' rows = "4" cols = "25"><?PHP echo $_GET['jawapan_d']; ?></textarea></td>
+<td bgcolor = 'pink'><textarea name = 'jawapan_d' rows = "4" cols = "25">
+<?PHP echo $_GET['jawapan_d']; ?></textarea></td>
 
 </form>
 </tr>
