@@ -62,7 +62,7 @@ if (!empty ($_POST)) {
 <table width = '100%' border = '1' id = 'besar'>
 	<tr>
 		<td>Soalan</td>
-		<td bgcolor = 'cyan'>Jawapan A</td>
+		<td bgcolor = 'cyan'> Jawapan A (Betul)</td>
 		<td bgcolor = 'pink'>Jawapan B</td>
 		<td bgcolor = 'pink'>Jawapan C</td>
 		<td bgcolor = 'pink'>Jawapan D</td>
@@ -76,16 +76,18 @@ if (!empty ($_POST)) {
 <?PHP echo $_GET['soalan']; ?></textarea></td>
 
 <td bgcolor = 'cyan'><textarea name = 'jawapan_a' rows = "4" cols = "25">
-<?PHP echo $_GET['jawapan_a']; ?></textarea></td>
+<?PHP echo $_GET['jawapan_a']; ?> </textarea></td>
 
 <td bgcolor = 'pink'><textarea name = 'jawapan_b' rows = "4" cols = "25">
-<?PHP echo $_GET['jawapan_b']; ?></textarea></td>
+<?PHP echo $_GET['jawapan_b']; ?> </textarea></td>
 
 <td bgcolor = 'pink'><textarea name = 'jawapan_c' rows = "4" cols = "25">
-<?PHP echo $_GET['jawapan_c']; ?></textarea></td>
+<?PHP echo $_GET['jawapan_c']; ?> </textarea></td>
 
 <td bgcolor = 'pink'><textarea name = 'jawapan_d' rows = "4" cols = "25">
-<?PHP echo $_GET['jawapan_d']; ?></textarea></td>
+<?PHP echo $_GET['jawapan_d']; ?> </textarea></td>
+
+<td><input type = 'submit' value = 'simpan'></td>
 
 </form>
 </tr>
