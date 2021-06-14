@@ -81,7 +81,7 @@ if (isset($_POST['btn-upload'])){
  	else {
 
 		echo "<script>alert('Import fail GAGAL disimpan BOOOOOOO!!!');
-		window.location.href = 'murid_senarai.php';<";
+		window.location.href = 'murid_upload.php';<";
  	}
 }
 ?> 

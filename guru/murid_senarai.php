@@ -6,9 +6,9 @@ include ('header_guru.php');
 if (!empty($_POST)) {
 
 	//mengambil data murid baru yang dihantar melalui borang pada senarai 
-	$nama = mysqli_real_escape($condb , $_POST['nama_baru']);
-	$id = mysqli_real_escape($condb , $_POST['id_baru']);
-	$katalaluan = mysqli_real_escape($condb , $_POST['katalaluan_baru']);
+	$nama = mysqli_real_escape_string($condb , $_POST['nama_baru']);
+	$id = mysqli_real_escape_string ($condb , $_POST['id_baru']);
+	$katalaluan = mysqli_real_escape_string ($condb , $_POST['katalaluan_baru']);
 	$id_kelas = $_POST['id_kelas'];
 
 	//menyemak kewujudan data yang dihantar 

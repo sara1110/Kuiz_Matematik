@@ -11,8 +11,8 @@ if(empty($_GET)){
 if(!empty($_POST)){
 	//mengambil data baru yang diubah suai melalui borang di bawah 
 	$nama = mysqli_real_escape_string($condb , $_POST['nama_baru']);
-	$id = mysqli_real_escape_string($condb , $_POST['id_baru']);
-	$katalaluan = mysqli_real_escape_string($condb , $_POST['latalaluan_baru']);
+	$id = mysqli_real_escape_string ($condb , $_POST['id_baru']);
+	$katalaluan = mysqli_real_escape_string($condb , $_POST['katalaluan_baru']);
 	$tahap = $_POST['tahap'];
 
 	//menyemak kewujudan data yang diambil 
@@ -29,7 +29,7 @@ if(!empty($_POST)){
 	}
 
 	//arahan untuk mengemaskini data guru
-	$arahan_kemaskini = "update guru set 
+	$arahan_kemaskini = "update GURU set 
 	nama_guru = '$nama',
 	id_guru = '$id',
 	katalaluan_guru = 'katalaluan', 
