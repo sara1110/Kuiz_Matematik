@@ -72,6 +72,8 @@ if (!empty($_POST)) {
 			</td>
 			<td><input type = "date" name = "tarikh"></td>
 			<td><input type = "number" name = "masa"></td>
+
+			<td><input type = 'submit' value = 'simpan'></td>
 			
 		</form>
 	</tr>

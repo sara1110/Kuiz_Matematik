@@ -20,7 +20,7 @@ if (!empty ($_POST)) {
 	}
 
 	//arahan untuk memasukkan data ke dalam KELAS 
-	$arahan_simpan = "insert into KELAS ($tingkatan , $nama_kelas , $id_guru)
+	$arahan_simpan = "insert into KELAS (tingkatan , nama_kelas , id_guru)
 	values ('$tingkatan' , '$nama_kelas' , '$id_guru')"; 
 
 	//melaksanakan arahan untuk memasukkan data 
@@ -34,6 +34,7 @@ if (!empty ($_POST)) {
 	else {
 
 		//data gagal disimpan 
+		trigger_error("Query Failed! SQL: $sql - Error: ".mysqli_error($condb), E_USER_ERROR);
 		echo "<script>alert('Pendaftaran GAGAL BOOOOOOOOOOOOO');
 		window.location.href = 'senarai_kelas.php';</script>";
 	}
@@ -100,7 +101,7 @@ if (!empty ($_GET)) {
 				//melaksanakan arahan mencari data 
 				$laksana_arahan_cari = mysqli_query ($condb , $sql);
 
-				//pembolehubah $rekod_guru mengambil data yang ditemui baris demi baris 
+				//pembolehubah $rekod_guru mengambil data yang ditemui baris demi baris
 				while ($rekod_guru = mysqli_fetch_array ($laksana_arahan_cari)) {
 
 					//memaparkan data yang ditemui dalam element <option></option>
@@ -133,19 +134,20 @@ while ($data = mysqli_fetch_array ($laksana_cari_kelas)) {
 	       <form action = '' method = 'GET'>
 	       <input type = 'hidden' name = 'id_kelas' value = '".$data['id_kelas']."'>
 	       <select name = 'id_guru_baru'>
-	       			<option value selected disable>Pilih</option>";
+	       			<option value selected disabled>Pilih</option>";
+
 
 	    //arahan untuk mencari semua data dari jadual jenis_guru 
 	    $sql2 = "select * from GURU";
 
 	    //melaksanakan arahan mencari_data 
-	    $laksana_arahan_cari2 = mysqli_query ($condb , $sql2);
+	    $laksana_arahan_cari2 = mysqli_query ($condb , $sql2) or trigger_error("Query Failed! SQL: $sql - Error: ".mysqli_error($condb), E_USER_ERROR);
 
 	    //pembolehubah $rekod_guru mengambil data yang ditemui baris demi baris 
 	    while ($rekod_guru2 = mysqli_fetch_array ($condb , $laksana_arahan_cari2)) {
 
 	    	//memaparkan data yang ditemui dalam element <option></option>
-	    	echo "<option value = ".$rekod_guru2['id_guru']."> ".$rekod_guru2['nama_guru']."</option>";
+	    	echo "<option value = '".$rekod_guru2['id_guru']."'> ".$rekod_guru2['nama_guru']."</option>";
 	    }
 
 	//memaparkan data yang ditemui dalam element <option></option>

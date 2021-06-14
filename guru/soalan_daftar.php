@@ -88,6 +88,7 @@ if(!empty($_POST)) {
 			<td bgcolor = 'pink'><textarea name = 'jawapan_b' rows = "4" cols = "25"></textarea></td>
 			<td bgcolor = 'pink'><textarea name = 'jawapan_c' rows = "4" cols = "25"></textarea></td>
 			<td bgcolor = 'pink'><textarea name = 'jawapan_d' rows = "4" cols = "25"></textarea></td>	
+			<td><input type = 'submit' value = 'simpan'></td>
 		</form>
 	</tr>
 

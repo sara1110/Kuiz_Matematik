@@ -85,7 +85,7 @@ while ($rekod_bilik = mysqli_fetch_array($laksana_arahan_cari)){
 ?>
     		</select>
     	</td>
-    	
+    	<td><input type = 'submit' value = 'simpan'></td>
     </form>
 		
 	</tr>
