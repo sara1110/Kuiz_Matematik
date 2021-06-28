@@ -32,8 +32,8 @@ if(!empty($_POST)){
 	$arahan_kemaskini = "update GURU set 
 	nama_guru = '$nama',
 	id_guru = '$id',
-	katalaluan_guru = 'katalaluan', 
-	tahap = 'tahap'
+	katalaluan_guru = '$katalaluan', 
+	tahap = '$tahap'
 	where 
 	id_guru = '".$_GET['id_guru']."'";
 
@@ -71,7 +71,7 @@ if(!empty($_POST)){
 <td><input type = "password" name = "katalaluan_baru" value = "<?PHP echo $_GET['katalaluan_guru']; ?>"></td>
     <td>
     	<select name = "tahap">
-    		<option value selected disabled>Pilih</option>
+    		<option value selected="" disabled>Pilih</option>
     		<option value = "GURU">GURU</option>
     		<option value = "ADMIN">ADMIN</option>
     		

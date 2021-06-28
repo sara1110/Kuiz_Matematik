@@ -108,8 +108,8 @@ if (!empty ($_POST)) {
 	$nama_topik = $data2['topik']; 
 
 	//arahan sql untuk memilih pelajar berdasarkan id_kelas yang dihantar 
-	$arahan_pilih = "SELECT * from PELAJAR , KELAS where PELAJAR.id_kelas = KELAS.id_kelas 
-	                 PELAJAR.id_kelas = '$id_kelas' ORDER BY PELAJAR.nama_pelajar ASC "; 
+	$arahan_pilih = "SELECT * from PELAJAR, KELAS where PELAJAR.id_kelas = KELAS.id_kelas 
+	                 and PELAJAR.id_kelas = '$id_kelas' ORDER BY PELAJAR.nama_pelajar ASC "; 
 
 	//melaksanakan arahan untuk memilih pelajar 
 	$laksana_pilih = mysqli_query ($condb , $arahan_pilih); 
@@ -153,7 +153,7 @@ if (!empty ($_POST)) {
 
 		//mengambil bilangan jawapan yang ditemui 
 		$bil_jawapan = mysqli_num_rows ($laksana_skor);
-		$bil_betul = 0 
+		$bil_betul = 0; 
 
 		//jika bilangan jawapan yang ditemui >= 1 
 		if ($bil_jawapan >= 1) {
@@ -176,7 +176,7 @@ if (!empty ($_POST)) {
 			      <td>".number_format($markah , 0)." % </td>";
 		}
 		else 
-			echo "<td></td> <td>Belum Jawab</td>"
+			echo "<td></td> <td>Belum Jawab</td>";
 	}
 
 	//mengambil data yang ditemui 

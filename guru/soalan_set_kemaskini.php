@@ -109,7 +109,6 @@ while ($data = mysqli_fetch_array ($laksana_soalan)) {
 	$data_get = array (
 		'no_set' => $data['no_set'],
 		'no_soalan' => $data['no_soalan'],
-		'topik' => $_GET['topik'],
 		'soalan' => $data['soalan'],
 		'jawapan_a' => $data['jawapan_a'],
 		'jawapan_b' => $data['jawapan_b'],

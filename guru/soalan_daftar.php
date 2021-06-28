@@ -35,7 +35,7 @@ if(!empty($_POST)) {
 	else {
 
 		//arahan untuk menyimpan soalan yang tidak mempunyai gambar 
-		$arahan_simpan = "insert into soalan (no_set , soalan , gambar , jawapan_a , jawapan_b , jawapan_c , jawapan_d)
+		$arahan_simpan = "insert into soalan (no_set , soalan , jawapan_a , jawapan_b , jawapan_c , jawapan_d)
 		values 
 		('".$_GET['no_set']."' , '$soalan' , '$jawapan_a' , '$jawapan_b' , '$jawapan_c' , '$jawapan_d')";
 	}
@@ -106,7 +106,6 @@ while ($data = mysqli_fetch_array ($laksana_soalan)) {
 	$data_get = array (
 		'no_set' => $data['no_set'],
 		'no_soalan' => $data['no_soalan'],
-		'topik' => $data['topik'],
 		'soalan' => $data['soalan'],
 		'jawapan_a' => $data['jawapan_a'],
 		'jawapan_b' => $data['jawapan_b'],
@@ -115,7 +114,7 @@ while ($data = mysqli_fetch_array ($laksana_soalan)) {
 	);
 
 	//memaparkan soalan data yang ditemui
-	"echo <tr>
+	echo "<tr>
 	<td>".$data['soalan']."</td>
 	<td><img src='".$data['gambar']."' width = '50%'></td>
 	<td>".$data['jawapan_a']."</td>

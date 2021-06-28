@@ -31,6 +31,8 @@ if (isset($_POST['btn-upload'])){
 	$jenisfail = pathinfo($namafail , PATHINFO_EXTENSION);
 
 	//menguji jenis fail dan saiz fail 
+	print_r($_FILES);
+	print_r($jenisfail);
 	if ($_FILES["file"]["size"] > 0 AND $jenisfail == "csv"){
 
 		//membuka fail yang diambil 
@@ -51,15 +53,19 @@ if (isset($_POST['btn-upload'])){
 			$id_kelas = mysqli_real_escape_string ($condb , $data[3]);
 
 			if ($counter > 1) {
-
+				print_r($nama);
 				//arahan untuk menyimpan data murid 
-				$arahan_simpan = "INSERT into PELAJAR (nama_pelajar , id_pelajar , katalaluan_pelajar , id_kelas) values ($nama , $id , $katalaluan , $id_kelas)" ;
+				$arahan_simpan = "INSERT into PELAJAR (nama_pelajar , id_pelajar , katalaluan_pelajar , id_kelas) values ('$nama' , '$id' , '$katalaluan' , '$id_kelas')";
 
 				//melaksanakan arahan untuk menyimpan data 
 				if (mysqli_query ($condb , $arahan_simpan)) {
 
 					//mengira bilangan data yang berjaya disimpan 
 					$bil_berjaya++;
+				}
+				else {
+
+				 echo mysqli_error($condb);
 				}
 			}
 			$jum_data++;
