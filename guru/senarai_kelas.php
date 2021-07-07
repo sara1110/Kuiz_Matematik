@@ -47,16 +47,16 @@ if (!empty ($_GET)) {
 
 	//mengambil data GET 
 	$id_kelas = $_GET['id_kelas'];
-	$id_guru = $_GET['id_guru'];
+	$id_guru = $_GET['id_guru_baru'];
 
-	if (empty ($id_guru) or empty ($id_kelas)) {
+	if (empty ($id_kelas) or empty ($id_guru)) {
 
 		die("<script>alert('Sila lengkapkan maklumat'); 
 			window.history.back();</script>");
 	}
 
 	//arahan untuk mengemaskini guru kelas 
-	$arahan_kemaskini = "update KELAS set id_guru = '$id_guru' where id_kelas = '$id_kelas'";
+	$arahan_kemaskini = "update KELAS set id_guru = '$id_guru' where id_kelas = '$id_kelas' ";
 
 	//melaksanakan arahan untuk mengemaskini guru kelas 
 	if (mysqli_query ($condb , $arahan_kemaskini)) {
