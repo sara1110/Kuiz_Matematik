@@ -19,7 +19,7 @@ a {
   	 	<form action = 'login.php' method = 'POST'>
   ID Pengguna	<input type = 'text'           name= 'id' placeholder="040503010203"><br>
   Katalaluan	 		<input type = 'password'       name= 'katalaluan'><br>
-  	 		<input type = 'radio'      name ='jenis'   value = 'murid' checked>Murid 
+  	 		<input type = 'radio'      name ='jenis'   value = 'pelajar' checked>Murid 
   	 		<input type = 'radio'      name = 'jenis' value = 'guru'>Guru<br>
   	 		<input type = 'submit'     value = 'Login'>
 

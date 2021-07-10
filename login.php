@@ -21,6 +21,7 @@ if($_POST['jenis'] == 'pelajar')
 }
 
 //Set pembolehubah jika jenis pengguna adalah guru 
+else if ($_POST ['jenis']== 'guru')
 {
 	$jadual = "guru";
 	$medan1 = "id_guru";
