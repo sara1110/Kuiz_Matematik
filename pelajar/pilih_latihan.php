@@ -8,7 +8,7 @@ include ('../connection.php');
 function skor($no_set , $bil_soalan) {
 
 	//memanggil fail connection.php dari folder utama 
-	include ('../connection.php');
+	//include ('../connection.php');
 
 	//arahan untuk mendapatkan data jawapan murid 
 	$arahan_skor = "SELECT * FROM set_soalan , soalan , jawapan_pelajar
@@ -71,14 +71,14 @@ $arahan_cari = "select * from PELAJAR where id_pelajar = '".$_SESSION['id_pelaja
 $laksana_cari = mysqli_query ($condb , $arahan_cari);
 
 //mengambil data yang ditemui 
-$data_murid = mysqli_fetch_array ($laksana_cari);
+$data_pelajar = mysqli_fetch_array ($laksana_cari);
 
 //arahan untuk mencari data set soalan 
 $arahan_pilih_latihan = "SELECT set_soalan.no_set , COUNT (soalan.no_soalan) AS bil_soalan , topik , jenis 
 FROM set_soalan , soalan , GURU , KELAS WHERE set_soalan.no_set = soalan.no_set
 AND set_soalan.id_guru = GURU.id_guru
 AND KELAS.id_guru = GURU.id_guru
-AND KELAS.id_kelas = '".$data_murid['id_kelas']."'
+AND KELAS.id_kelas = '".$data_pelajar['id_kelas']."'
 GROUP BY topik";
 
 //melaksanakan arahan untuk mencari data set soalan 

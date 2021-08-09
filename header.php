@@ -14,7 +14,7 @@ error_reporting(E_ALL);
 <!-- Menu Bahagian Murid -->
 <?php if(!empty($_SESSION) and basename($_SERVER['PHP_SELF']) != 'index.php'){ ?>
 
-<?php echo "Nama Murid : ". $_SESSION['nama_murid']; ?>
+<?php echo "Nama Pelajar : ". $_SESSION['nama_pelajar']; ?>
   <a href = 'pilih_latihan.php' >Laman Utama</a>
   <a href = '../logout.php'>logout</a>
 <hr>

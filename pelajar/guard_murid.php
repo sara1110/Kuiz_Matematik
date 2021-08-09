@@ -1,6 +1,6 @@
 <?PHP 
 //menyemak kewujudan data pada pembolehubah session [nama_murid]
-if (empty ($_SESSION['nama_murid'])) {
+if (empty ($_SESSION['nama_pelajar'])) {
 
 	//jika pembolehubah session tidak mempunyai nilai, papar pop up dan
 	//buka fail index di laman utama 

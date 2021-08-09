@@ -103,8 +103,8 @@ $laksana_cari_murid = mysqli_query($condb , $arahan_cari_murid);
 //pembolehubah $data mengambil semua data yang ditemui 
 while ($data = mysqli_fetch_array($laksana_cari_murid)){
 
-	//mengumpukan data murid kedalam tatasusunan data_murid
-	$data_murid = array(
+	//mengumpukan data murid kedalam tatasusunan data_pelajar
+	$data_pelajar = array(
 		'nama_pelajar' => $data['nama_pelajar'],
 	    'id_pelajar' => $data['id_pelajar'],
 	    'katalaluan_pelajar' => $data['katalaluan_pelajar']
@@ -116,7 +116,7 @@ echo "<tr>
        <td>".$data['id_pelajar']."</td>
        <td>".$data['katalaluan_pelajar']."</td>
        <td>
-| <a href = 'murid_kemaskini.php?".http_build_query($data_murid)."'> Kemaskini </a>
+| <a href = 'murid_kemaskini.php?".http_build_query($data_pelajar)."'> Kemaskini </a>
 
 | <a href = 'padam.php?jadual=PELAJAR&medan=id_pelajar&id=".$data['id_pelajar']."' onClick=\"return confirm ('Anda pasti anda ingin memadam data ini.')\">Padam</a> |
        </td>
