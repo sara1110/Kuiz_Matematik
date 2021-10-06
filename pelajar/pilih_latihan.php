@@ -8,7 +8,7 @@ include ('../connection.php');
 function skor($no_set , $bil_soalan) {
 
 	//memanggil fail connection.php dari folder utama 
-	//include ('../connection.php');
+	include ('../connection.php');
 
 	//arahan untuk mendapatkan data jawapan murid 
 	$arahan_skor = "SELECT * FROM set_soalan , soalan , jawapan_pelajar
@@ -21,11 +21,11 @@ function skor($no_set , $bil_soalan) {
 	$laksana_skor = mysqli_query ($condb, $arahan_skor);
 
 	//mengira bilangan jawapan 
-	$bil_jawapan = mysqli_num_row ($laksana_skor);
+	$bil_jawapan = mysqli_num_rows($laksana_skor);
 	$bil_betul = 0;
 
 	//pembolehubah rekod mengambil data yang ditemui semasa laksanakan arahan 
-	while ($rekod = mysqli_fetch_aray ($laksana_skor)) {
+	while ($rekod = mysqli_fetch_array ($laksana_skor)) {
 
 		//mengira jawapan yang betul 
 		switch ($rekod ['catatan']) {
@@ -74,15 +74,15 @@ $laksana_cari = mysqli_query ($condb , $arahan_cari);
 $data_pelajar = mysqli_fetch_array ($laksana_cari);
 
 //arahan untuk mencari data set soalan 
-$arahan_pilih_latihan = "SELECT set_soalan.no_set , COUNT (soalan.no_soalan) AS bil_soalan , topik , jenis 
+$arahan_pilih_latihan = "SELECT set_soalan.no_set , COUNT(soalan.no_soalan) AS bil_soalan , topik , jenis 
 FROM set_soalan , soalan , GURU , KELAS WHERE set_soalan.no_set = soalan.no_set
 AND set_soalan.id_guru = GURU.id_guru
 AND KELAS.id_guru = GURU.id_guru
 AND KELAS.id_kelas = '".$data_pelajar['id_kelas']."'
-GROUP BY topik";
+GROUP BY set_soalan.no_set, topik";
 
 //melaksanakan arahan untuk mencari data set soalan 
-$laksana = mysqli_query ($condb , $arahan_pilih_latihan);
+$laksana = mysqli_query($condb , $arahan_pilih_latihan);
 $i = 0;
 
 //pembolehubah data mengambil setiap data yang ditemui 
