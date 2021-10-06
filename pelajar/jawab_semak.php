@@ -88,7 +88,7 @@ foreach ($_POST as $key => $value)
            
             <td colspan='2' align='right'><b>Jawapan Pelajar :</b> $nilai_jawapan | <b>Jawapan Sebenar : </b>$jawapana</td>
         </tr>";
-        $arahan_simpan=$arahan_simpan."('$no_soalan','$medan','$catatan','".$_SESSION['nokp_murid']."'),";
+        $arahan_simpan=$arahan_simpan."('$no_soalan','$medan','$catatan','".$_SESSION['id_pelajar']."'),";
 }
 $arahan_simpan=rtrim($arahan_simpan,",");
 if(mysqli_query($condb,$arahan_simpan))
