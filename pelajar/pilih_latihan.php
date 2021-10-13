@@ -41,7 +41,7 @@ function skor($no_set , $bil_soalan) {
 	//memaparkan sjor dan markah dalam %
 	echo "<td align = 'right'>$bil_betul/$bil_soalan</td>
 		  <td align = 'right'>".number_format($peratus , 0)."%</td>";
-		  $kumpul = $bil_betul. "|".$bil_betul."|".$peratus."|".$bil_jawapan;
+		  $kumpul = $bil_betul. "|".$bil_soalan."|".$peratus."|".$bil_jawapan;
 
 	//memulangkan nilai bil betul, bil soalan, peratus dan bilangan jawapan
 		  return $kumpul;
@@ -114,7 +114,7 @@ while ($data = mysqli_fetch_array ($laksana)) {
 	else {
 
 		//jika tidak, murid hanya boleh mengulangkaji semua soalan yang telah dijawab 
-		echo "<td><a href = 'ulangkaji.php?no_set=".$data ['no_set']."&topik=".$data['topik']."&kumpul".$kumpul."'>Ulangkaji</a></td> ";
+		echo "<td><a href = 'ulangkaji.php?no_set=".$data ['no_set']."&topik=".$data['topik']."&kumpul=".$kumpul."'>Ulangkaji</a></td> ";
 	}
 	echo "<tr>";
 } 

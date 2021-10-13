@@ -4,7 +4,7 @@ include ('../header.php');
 include ('../connection.php');
 
 # menyemak kewujudan data GET dan session[nama_murid]
-if(empty($_GET) or empty($_SESSION['nama_murid']))
+if(empty($_GET) or empty($_SESSION['nama_pelajar']))
 {
     # jika tidak wujud. aturcara akan dihentikan 
     die("<script>alert('Akses tanpa kebenaran');
@@ -12,19 +12,19 @@ if(empty($_GET) or empty($_SESSION['nama_murid']))
 }
 
 # memecahkan data GET 
-$pecahkanbaris  = explode("|",$_GET['kumpul']);
+$pecahkanbaris= explode("|",$_GET['kumpul']);
 
 # mengumpukkan data yang dipecahkan kepada pembolehubah
 list($bil_betul,$bil_soalan,$peratus,$bil_jawapan) = $pecahkanbaris;
 
 # arahan untuk mencari jawapan pelajar berdasarkan nokp_murid dan no set soalan 
 $arahan_carian="SELECT* 
-from set_soalan,soalan,jawapan_murid,nokp_murid
+from set_soalan,soalan,jawapan_pelajar,PELAJAR
 where 
      set_soalan.no_set     =  soalan.no_set
-AND  soalan.no_soalan      =  jawapan_murid.no_soalan
-AND  murid.nokp_murid      =  jawapan_murid.nokp_murid
-AND  murid.nokp_murid      =  '".$_SESSION['nokp_murid']."'
+AND  soalan.no_soalan      =  jawapan_pelajar.no_soalan
+AND  PELAJAR.id_pelajar      =  jawapan_pelajar.id_pelajar
+AND  PELAJAR.id_pelajar      =  '".$_SESSION['id_pelajar']."'
 AND soalan.no_set          =  '".$_GET['no_set']."'
 ";
 

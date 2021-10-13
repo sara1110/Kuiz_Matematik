@@ -22,7 +22,7 @@ echo"
     <td>Bil</td>
     <td>soalan</td>
 </tr>";
-$arahan_simpan="insert into jawapan_murid(no_soalan,jawapan,catatan,nokp_murid)
+$arahan_simpan="insert into jawapan_pelajar(no_soalan,jawapan,catatan,id_pelajar)
 values";
 foreach ($_POST as $key => $value)
 {
@@ -62,7 +62,7 @@ foreach ($_POST as $key => $value)
     {
         $warna="bgcolor='yellow'";
         $catatan="SALAH";
-        $medan='tidak jawap';
+        $medan='tidak jawab';
     }
     else
     {
