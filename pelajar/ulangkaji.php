@@ -25,7 +25,7 @@ where
 AND  soalan.no_soalan      =  jawapan_pelajar.no_soalan
 AND  PELAJAR.id_pelajar      =  jawapan_pelajar.id_pelajar
 AND  PELAJAR.id_pelajar      =  '".$_SESSION['id_pelajar']."'
-AND soalan.no_set          =  '".$_GET['no_set']."'
+AND soalan.no_set = '".$_GET['no_set']."'
 ";
 
 # melaksanakan arahan mencari jawapan pelajar 

@@ -13,7 +13,7 @@ if (!empty ($_POST)) {
 	$id_guru = $_POST['id_guru'];
 
 	//menyemak kewujudan data yang diambil 
-	if (empty ($nama_kelas) or empty ($tingkatan) or empty ($id_guru)) {
+	if (empty ($nama_kelas) or empty ($id_guru) or empty ($tingkatan)) {
 
 		die("<script>alert('Sila lengkapkan maklumat!!!');
 			window.history.back();</script>");
@@ -34,7 +34,7 @@ if (!empty ($_POST)) {
 	else {
 
 		//data gagal disimpan 
-		trigger_error("Query Failed! SQL: $sql - Error: ".mysqli_error($condb), E_USER_ERROR);
+		//trigger_error("Query Failed! SQL: $sql - Error: ".mysqli_error($condb), E_USER_ERROR);
 		echo "<script>alert('Pendaftaran GAGAL BOOOOOOOOOOOOO');
 		window.location.href = 'senarai_kelas.php';</script>";
 	}

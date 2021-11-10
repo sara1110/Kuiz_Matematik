@@ -72,7 +72,7 @@ if (!empty($_POST)) {
     			<option value selected disable>Pilih</option>
 <?PHP 
 //arahan untuk mencari semua data dari jadual kelas 
-$sql = "select * from kelas";
+$sql = "select * from KELAS";
 
 //melaksanakan arahan mencari data 
 $laksana_arahan_cari = mysqli_query($condb , $sql);

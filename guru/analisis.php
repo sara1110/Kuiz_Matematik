@@ -96,7 +96,7 @@ if (!empty ($_POST)) {
 
 	//bhgian untuk mendapatkan nama topik set latihan berdasarkan no_set yang dihantar 
 	//arahan untuk mencari semua data set_soalan berdasarkan no_set yang dipilih 
-	$arahan_topik = "select * from set_soalan where no_set = '$no_set'"; 
+	$arahan_topik = "SELECT * from set_soalan where no_set = '$no_set'"; 
 
 	//melaksanakan arahan untuk mencari di atas 
 	$laksana_topik = mysqli_query ($condb , $arahan_topik); 

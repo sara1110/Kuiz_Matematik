@@ -21,15 +21,15 @@ if(!empty($_POST)) {
 		$timestmp = date("Y-m-d");
 		$saiz_fail = $_FILES['gambar']['size'];
 		$nama_fail = basename ($_FILES["gambar"]["name"]);
-		$jenis_gambar = pathinfo ($nama_fail , PATHINFO_EXTENSION);
+		$jenis_gambar = pathinfo($nama_fail , PATHINFO_EXTENSION);
 		$lokasi = $_FILES['gambar']['tmp_name'];
 		$nama_baru_gambar = "../images/".$timestmp.".".$jenis_gambar;
 		move_uploaded_file($lokasi, $nama_baru_gambar);
 
 		//arahan untuk menyimpan soalan yang mempunyai gambar 
-		$arahan_simpan = "insert into soalan (no_set , soalan , gambar , jawapan_a , jawapan_b , jawapan_c , jawapan_d)
+		$arahan_simpan = "INSERT into soalan (no_set , soalan , gambar , jawapan_a , jawapan_b , jawapan_c , jawapan_d)
 		values 
-		('".$_GET['no_set']."' , '$soalan' , '$jawapan_a' , '$jawapan_b' , '$jawapan_c' , '$jawapan_d')";
+		('".$_GET['no_set']."' , '$soalan' , '$nama_baru_gambar' '$jawapan_a' , '$jawapan_b' , '$jawapan_c' , '$jawapan_d')";
 	}
 
 	else {
@@ -81,7 +81,7 @@ if(!empty($_POST)) {
 	<!-- Bahagian untuk mendaftar soalan baharu -->
 		<form action = '' method = 'POST' enctype = 'multipart/form-data'>
 			<td><textarea name = 'soalan' rows = "4" cols = "25"></textarea></td>
-			<td><input type = 'file' name = 'gambar'></td>
+			<td><input type= 'file' name = 'gambar'></td>
 			<td bgcolor = 'cyan'>
 			<textarea name = 'jawapan_a' rows = "4" cols = "25"></textarea>	
 			</td>
@@ -94,7 +94,7 @@ if(!empty($_POST)) {
 
 <?PHP 
 //arahan untuk mencari soalan berdasarkan set soalan 
-$arahan_soalan = "select * from soalan where no_set = '".$_GET['no_set']."' order by no_soalan DESC";
+$arahan_soalan = "SELECT * from soalan where no_set = '".$_GET['no_set']."' order by no_soalan DESC";
 
 //melaksanakan arahan untuk mencari soalan 
 $laksana_soalan = mysqli_query ($condb , $arahan_soalan);
@@ -116,7 +116,7 @@ while ($data = mysqli_fetch_array ($laksana_soalan)) {
 	//memaparkan soalan data yang ditemui
 	echo "<tr>
 	<td>".$data['soalan']."</td>
-	<td><img src='".$data['gambar']."' width = '50%'></td>
+	<td><img src='".$data['gambar']."' width ='50%'></td>
 	<td>".$data['jawapan_a']."</td>
 	<td>".$data['jawapan_b']."</td>
 	<td>".$data['jawapan_c']."</td>

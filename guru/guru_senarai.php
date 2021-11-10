@@ -99,7 +99,7 @@ while ($data = mysqli_fetch_array($laksana_cari_guru))
         <td>".$data['tahap']."</td>
         <td>
             | <a href = 'guru_kemaskini.php?".http_build_query($data_guru)."'> Kemaskini </a> 
-| <a href = 'padam.php?jadual=guru&medan=id_guru&id =".$data['id_guru']."' onClick =\"return confirm('Sebelum memadam data guru,pastikan beliau tidak mempunyai kelas terlebih dahulu')\"> Padam </a>|</td>
+| <a href = 'padam.php?jadual=guru&medan=id_guru&id=".$data['id_guru']."' onClick =\"return confirm('Sebelum memadam data guru,pastikan beliau tidak mempunyai kelas terlebih dahulu')\"> Padam </a>|</td>
     </tr>";
 }
 ?>	

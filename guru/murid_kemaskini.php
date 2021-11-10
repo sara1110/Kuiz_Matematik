@@ -9,7 +9,7 @@ if (empty($_GET)){
 		window.location.href = 'murid_senarai.php'; </script>");
 }
 
-if (!empty($_GET)){
+if (!empty($_POST)){
 
 	//mengambil data baru yang diubah suai melalui borang di bawah
 	$nama = mysqli_real_escape_string($condb, $_POST['nama_baru']);
@@ -26,7 +26,7 @@ if (!empty($_GET)){
 	}
 
 	//had atas dan had bawah. data validation bagi id murid
-	if (strlen($id) != 12 or !is_numeric($id)){
+    if (strlen($id) != 12 or !is_numeric($id)){
 
 		die("<script>alert('Ralat No. Id');
 			window.history.back();</script>");
