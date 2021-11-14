@@ -96,7 +96,7 @@ if (!empty ($_GET)) {
 				<option value selected disable>Pilih</option>
 				<?PHP 
 				//arahan untuk mencari semua data dari jadual jenis_guru 
-				$sql = "select * from GURU";
+				$sql = "SELECT * from GURU";
 
 				//melaksanakan arahan mencari data 
 				$laksana_arahan_cari = mysqli_query ($condb , $sql);
@@ -117,7 +117,7 @@ if (!empty ($_GET)) {
 
 <?PHP 
 //arahan untuk mencari data yang sepadan dari jadual kelas dan guru 
-$arahan_cari_kelas = "select * from KELAS , GURU where KELAS.id_guru = GURU.id_guru order by nama_kelas ASC";
+$arahan_cari_kelas = "SELECT * from KELAS , GURU where KELAS.id_guru = GURU.id_guru order by nama_kelas ASC";
 
 //melaksanakan arahan untuk mencari data 
 $laksana_cari_kelas = mysqli_query ($condb , $arahan_cari_kelas);
@@ -134,17 +134,17 @@ while ($data = mysqli_fetch_array ($laksana_cari_kelas)) {
 	       <form action = '' method = 'GET'>
 	       <input type = 'hidden' name = 'id_kelas' value = '".$data['id_kelas']."'>
 	       <select name = 'id_guru_baru'>
-	       			<option value selected disabled>Pilih</option>";
+	       			<option value selected disable>Pilih</option>";
 
 
 	    //arahan untuk mencari semua data dari jadual jenis_guru 
-	    $sql2 = "select * from GURU";
+	    $sql2 = "SELECT * from GURU";
 
 	    //melaksanakan arahan mencari_data 
-	    $laksana_arahan_cari2 = mysqli_query ($condb , $sql2) or trigger_error("Query Failed! SQL: $sql - Error: ".mysqli_error($condb), E_USER_ERROR);
+	    $laksana_arahan_cari2 = mysqli_query ($condb , $sql2);
 
 	    //pembolehubah $rekod_guru mengambil data yang ditemui baris demi baris 
-	    while ($rekod_guru2 = mysqli_fetch_array ($condb , $laksana_arahan_cari2)) {
+	    while ($rekod_guru2 = mysqli_fetch_array ($laksana_arahan_cari2)) {
 
 	    	//memaparkan data yang ditemui dalam element <option></option>
 	    	echo "<option value = '".$rekod_guru2['id_guru']."'> ".$rekod_guru2['nama_guru']."</option>";

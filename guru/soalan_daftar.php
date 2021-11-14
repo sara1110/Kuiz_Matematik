@@ -29,7 +29,8 @@ if(!empty($_POST)) {
 		//arahan untuk menyimpan soalan yang mempunyai gambar 
 		$arahan_simpan = "INSERT into soalan (no_set , soalan , gambar , jawapan_a , jawapan_b , jawapan_c , jawapan_d)
 		values 
-		('".$_GET['no_set']."' , '$soalan' , '$nama_baru_gambar' '$jawapan_a' , '$jawapan_b' , '$jawapan_c' , '$jawapan_d')";
+		('".$_GET['no_set']."' , '$soalan' , '$nama_baru_gambar' ,
+		'$jawapan_a' , '$jawapan_b' , '$jawapan_c' , '$jawapan_d')";
 	}
 
 	else {
@@ -59,6 +60,7 @@ if(!empty($_POST)) {
 		//data soalan gagal disimpan 
 		echo "<script>alert('Pendaftaran GAGAL BOOOOOOOOOO!!!!!!');
 		window.location.href = 'soalan_daftar.php?no_set=".$_GET['no_set']."&topik=".$_GET['topik']."'</script>";
+		
 
 	}
 }
@@ -106,6 +108,7 @@ while ($data = mysqli_fetch_array ($laksana_soalan)) {
 	$data_get = array (
 		'no_set' => $data['no_set'],
 		'no_soalan' => $data['no_soalan'],
+		'topik' => $_GET['topik'],
 		'soalan' => $data['soalan'],
 		'jawapan_a' => $data['jawapan_a'],
 		'jawapan_b' => $data['jawapan_b'],

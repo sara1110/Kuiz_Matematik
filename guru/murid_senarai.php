@@ -92,7 +92,7 @@ while ($rekod_bilik = mysqli_fetch_array($laksana_arahan_cari)){
 
 <?PHP 
 //arahan untuk mencari semua data murid yang berdaftar 
-$arahan_cari_murid = "select * from PELAJAR , KELAS
+$arahan_cari_murid = "SELECT * from PELAJAR , KELAS
 where 
 PELAJAR.id_kelas = KELAS.id_kelas
 order by KELAS.tingkatan , KELAS.nama_kelas , PELAJAR.nama_pelajar ASC";
