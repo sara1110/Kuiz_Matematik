@@ -29,7 +29,7 @@ if (!empty ($_POST)) {
 	}
 
 	//arahan mengemaskini soalan dan jawapan 
-	$arahan_kemaskini = "update soalan 
+	$arahan_kemaskini = "UPDATE soalan 
 	set 
 	soalan = '".$_POST['soalan']."',
 	jawapan_a = '".$_POST['jawapan_a']."',
@@ -43,8 +43,8 @@ if (!empty ($_POST)) {
 	if (mysqli_query ($condb , $arahan_kemaskini)) {
 
 		//soalan berjaya disimpan 
-		echo "<script>alert('Kemaskini BERJAYA YAYYYYYYYYY!!!!');
-		window.location.href = 'soalan_set.php?no_set=".$_GET['no_set']."&topik=".$_GET['topik']."';</script>"; 
+		//echo "<script>alert('Kemaskini BERJAYA YAYYYYYYYYY!!!!');
+		//window.location.href = 'soalan_set.php?no_set=".$_GET['no_set']."&topik=".$_GET['topik']."';</script>"; 
 	}
 
 	else { 

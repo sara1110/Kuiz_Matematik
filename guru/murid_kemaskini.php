@@ -87,7 +87,7 @@ if (!empty($_POST)){
 				<option value selected disabled>Pilih</option>
 				<?PHP 
 				//arahan untuk mencari semua data murid yang berdaftar
-				$sql = "select * from KELAS";
+				$sql = "SELECT * from KELAS";
 
 				//melaksanakan arahan mencari data
 				$laksana_arahan_cari = mysqli_query ($condb , $sql);
@@ -96,7 +96,7 @@ if (!empty($_POST)){
 				while ($rekod_bilik = mysqli_fetch_array($laksana_arahan_cari)) {
 
 					//memaparkan data yang ditemui dalam element 
-					echo "<option value = ".$rekod_bilik['tingkatan'].">".$rekod_bilik['nama_pelajar']."</option>";
+					echo "<option value = ".$rekod_bilik['tingkatan'].">".$rekod_bilik['nama_kelas']."</option>";
 				}
 
 				?>

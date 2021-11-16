@@ -19,7 +19,7 @@ if ($_SESSION['tahap']=='ADMIN') {
 
 	//jika guru yang sedang login adalah admin 
 	//arahan untuk mencari semua kelas 
-	$sql = "select * from KELAS , GURU where KELAS.id_guru = GURU.id_guru";
+	$sql = "SELECT * from KELAS , GURU where KELAS.id_guru = GURU.id_guru";
 }
 
 else {
