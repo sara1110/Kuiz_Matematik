@@ -18,7 +18,7 @@ if(!empty($_POST)) {
 	if ($_FILES['gambar']['size'] != 0) {
 
 		//bahagian memuat naik gambar soalan 
-		$timestmp = date("Y-m-d");
+		$timestmp = date("Y-m-dhisA");
 		$saiz_fail = $_FILES['gambar']['size'];
 		$nama_fail = basename ($_FILES["gambar"]["name"]);
 		$jenis_gambar = pathinfo($nama_fail , PATHINFO_EXTENSION);
