@@ -82,6 +82,7 @@ table th {
 ul.menu {
 	list-style: none;
 	display: flex;
+	justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
@@ -89,16 +90,17 @@ ul.menu {
 }
 
 ul.menu > li {
-	margin-right: 1.6rem;
-	margin-top: 0.4rem;
+	margin-right: 1.2rem;
+	margin-top: 0.6rem;
 	display: inline-block;
 }
 
 ul.menu > li > a {
 	display: inline-block;
 	padding: 1rem;
-	padding-left: 1.6rem;
-	padding-right: 1.6rem;
+	font-size: 1.3rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
 	border-radius: 0.4rem;
 	border: 0.1rem solid #EFF6FF;
 	background-color: #DBEAFE;
@@ -108,4 +110,16 @@ ul.menu > li > a {
 
 ul.menu > li > a:hover {
 	background-color: #93C5FD;
+}
+
+h1 {
+	background-color: #EEF2FF;
+	color: #4338CA;
+    padding: 0.8rem;
+    padding-left: 1.2rem;
+    border-radius: 0.4rem;
+    font-size: 2.4rem;
+    border: 0.4rem outset #818CF8;
+    font-weight: 500;
+}
 }

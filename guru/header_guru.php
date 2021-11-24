@@ -29,7 +29,6 @@ if (empty($_SESSION['tahap']))
 
 <!-- tajuk Sistem -->
 <h1>Kuiz Matematik: Bahagian Guru</h1>
-<hr>
 
 <!-- menu -->
 <ul class="menu">
