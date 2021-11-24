@@ -21,11 +21,11 @@ input[type="text"] {
 	padding: 0.4rem;
 	border-color: #9CA3AF;
 	appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  box-shadow: none;
-  border-style: solid;
-  border-radius: 0.4rem;
+  	-moz-appearance: none;
+  	-webkit-appearance: none;
+  	box-shadow: none;
+  	border-style: solid;
+  	border-radius: 0.4rem;
 }
 
 input[type="submit"]{
@@ -39,19 +39,20 @@ input[type="submit"]{
 	border-color: #2563EB;
 	border-style: solid;
 	appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  outline: none;
+  	-moz-appearance: none;
+  	-webkit-appearance: none;
+  	outline: none;
 }
 
 input[type="submit"]:hover {
 	background-color: #1D4ED8;
 	appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  outline: none;
+  	-moz-appearance: none;
+  	-webkit-appearance: none;
+  	outline: none;
 }
 
+/* Table */
 table {
   border-collapse: collapse;
   width: 100%;
@@ -78,7 +79,7 @@ table th {
   color: #ECFDF5;
 }
 
-
+/* Menu */
 ul.menu {
 	list-style: none;
 	display: flex;
@@ -112,6 +113,7 @@ ul.menu > li > a:hover {
 	background-color: #93C5FD;
 }
 
+/* Main Title */
 h1 {
 	background-color: #EEF2FF;
 	color: #4338CA;
@@ -121,5 +123,5 @@ h1 {
     font-size: 2.4rem;
     border: 0.4rem outset #818CF8;
     font-weight: 500;
-}
+    text-align: center;
 }
