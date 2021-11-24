@@ -1,6 +1,12 @@
+
+<head>
+	<link rel="stylesheet" href="/matematik_kuiz/styles/guru.css">
+</head>
+
 <?PHP 
 //memulakan fungsi session 
 session_start();
+
 
 //memangil fail guard_guru.php
 include ('guard_guru.php');
@@ -26,13 +32,15 @@ if (empty($_SESSION['tahap']))
 <hr>
 
 <!-- menu -->
-| <a href = "index.php">Laman Utama</a>
+<ul class="menu">
+<li><a href = "index.php">Laman Utama</a></li>
 <?PHP if ($_SESSION['tahap']=='ADMIN'){ ?>
-	| <a href= "guru_senarai.php"> Maklumat Guru</a>
-	| <a href= "murid_senarai.php"> Pengurusan Murid</a>
-	| <a href= "senarai_kelas.php"> Pengurusan Kelas</a>
+	<li><a href= "guru_senarai.php"> Maklumat Guru</a></li>
+	<li><a href= "murid_senarai.php"> Pengurusan Murid</a></li>
+	<li><a href= "senarai_kelas.php"> Pengurusan Kelas</a></li>
 <?PHP } ?>
-    | <a href= "soalan_set.php"> Pengurusan Soalan</a>
-    | <a href= "analisis.php"> Analisis Prestasi</a>
-    | <a href= "../logout.php"> Logout</a>
+    <li><a href= "soalan_set.php"> Pengurusan Soalan</a></li>
+    <li><a href= "analisis.php"> Analisis Prestasi</a></li>
+    <li><a href= "../logout.php"> Logout</a></li>
+</ul>
 <hr>

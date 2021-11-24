@@ -54,13 +54,13 @@ function skor($no_set , $bil_soalan) {
 <!-- Bahagian memaparkan maklumat set soalan -->
 <table border = '1' id = 'besar'>
 <tr>
-	<td>Bil</td>
-	<td>Topik</td>
-	<td>Jenis Latihan</td>
-	<td>Bil Soalan</td>
-	<td>Skor</td>
-	<td>Peratus</td>
-	<td>Jawab</td>
+	<th>Bil</th>
+	<th>Topik</th>
+	<th>Jenis Latihan</th>
+	<th>Bil Soalan</th>
+	<th>Skor</th>
+	<th>Peratus</th>
+	<th>Jawab</th>
 </tr>
 
 <?PHP 

@@ -6,6 +6,9 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 ?>
+<head>
+	<link rel="stylesheet" href="/matematik_kuiz/styles/student.css">
+</head>
 
 <!-- Tajuk Sistem -->
 <h1 align = 'centre' >Kuiz Matematik</h1>

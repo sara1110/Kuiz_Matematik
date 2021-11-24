@@ -50,11 +50,11 @@ if(!empty($_POST))
 <?PHP include ('../butang_saiz.php'); ?>
 <table width= "100%" border = "1" id = "besar">
 	<tr>
-		<td>Nama</td>
-		<td>Id</td>
-		<td>Katalaluan</td>
-		<td>Tahap</td>
-		<td>Tindakan</td>
+		<th>Nama</th>
+		<th>Id</th>
+		<th>Katalaluan</th>
+		<th>Tahap</th>
+		<th>Tindakan</th>
 	</tr>
 	<tr> 
 		<!-- borang untuk mendaftarkan guru baru -->

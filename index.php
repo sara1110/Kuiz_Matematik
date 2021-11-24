@@ -3,15 +3,7 @@
 include ('header.php');
 ?>
 <!-- antara muka untuk daftar masuk / login -->
-<style>
-body {
-  background-color: lightcyan;
-}
-a {
 
-  color:red
-}
-</style>
 <table width = '100%'>
   <tr>
   	 <td align = 'centre' width = '50%'>

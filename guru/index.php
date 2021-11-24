@@ -10,9 +10,9 @@ echo "Nama Guru : ".$_SESSION['nama_guru']." (".$_SESSION['tahap'].")";
 Senarai Latihan Terkini 
         <table border= "1">
         <tr>
-        	<td>Topik</td>
-        	<td>Kelas</td>
-        	<td>Nama Guru</td>
+        	<th>Topik</th>
+        	<th>Kelas</th>
+        	<th>Nama Guru</th>
         </tr>
         <?PHP 
         //arahan untuk mencari data guru, kelas, dan set_soalan
