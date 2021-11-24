@@ -125,7 +125,7 @@ while ($data = mysqli_fetch_array ($laksana_soalan)) {
 	<td>".$data['jawapan_c']."</td>
 	<td>".$data['jawapan_d']."</td>
 <td>
-| <a href = 'soalan_set_kemaskini.php?".http_build_query($data_get)."'>Kemaskini</a>
+| <a href = 'soalan_kemaskini.php?".http_build_query($data_get)."'>Kemaskini</a>
 
 | <a href = 'padam.php?jadual=set_soalan&medan=no_set&id=".$data['no_set']."' onClick=\"return confirm('Anda pasti anda ingin memadam data ini.')\">Padam</a> |
 </td>
