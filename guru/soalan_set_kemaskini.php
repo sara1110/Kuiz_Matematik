@@ -58,12 +58,12 @@ if(!empty($_POST))
 <?PHP include ('../butang_saiz.php'); ?>
 <table width='100%' border='1' id='besar'>
     <tr>
-        <td>Topik</td>
-        <td>Arahan</td>
-        <td>Jenis</td>
-        <td>Tarikh</td>
-        <td>Masa</td>    
-        <td></td>   
+        <th>Topik</th>
+        <th>Arahan</th>
+        <th>Jenis</th>
+        <th>Tarikh</th>
+        <th>Masa</th>    
+        <th></th>   
     </tr>
     <tr>
     <!-- bahagian borang untuk mendaftar set soalan yang baru -->

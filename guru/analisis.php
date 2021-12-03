@@ -107,10 +107,10 @@ if(mysqli_num_rows($laksana_pilih))
     include ('../butang_saiz.php');
     echo"<table width='100%' border='1' id='besar'>
     <tr>
-        <td>Nama Murid</td>
-        <td>ID Murid</td>
-        <td>Skor</td>
-        <td>Markah</td>
+        <th>Nama Murid</th>
+        <th>ID Murid</th>
+        <th>Skor</th>
+        <th>Markah</th>
     </tr>";
 }
 else

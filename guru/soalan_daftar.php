@@ -71,13 +71,13 @@ if(!empty($_POST)) {
 <?PHP include ('../butang_saiz.php'); ?> 
 <table width = '100%' border = '1' id = 'besar'>
 	<tr>
-		<td>Soalan</td>
-		<td>Gambar Soalan</td>
-		<td bgcolor = 'cyan'>Jawapan A (betul)</td>
-		<td bgcolor = 'pink'>Jawapan B</td>
-		<td bgcolor = 'pink'>Jawapan C</td>
-		<td bgcolor = 'pink'>Jawapan D</td>
-		<td></td>
+		<th>Soalan</th>
+		<th>Gambar Soalan</th>
+		<th bgcolor = 'cyan'>Jawapan A (betul)</th>
+		<th bgcolor = 'pink'>Jawapan B</th>
+		<th bgcolor = 'pink'>Jawapan C</th>
+		<th bgcolor = 'pink'>Jawapan D</th>
+		<th></th>
 	</tr>
 	<tr>
 	<!-- Bahagian untuk mendaftar soalan baharu -->

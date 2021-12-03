@@ -80,11 +80,11 @@ if (!empty ($_GET)) {
 <?PHP include ('../butang_saiz.php'); ?>
 <table width = "100%" border = "1" id = "besar">
 	<tr>
-		<td>Tingkatan</td>
-		<td>Nama Kelas</td>
-		<td>Guru Subjek</td>
-		<td>Tukar Guru Baru</td>
-		<td>Tindakan</td>
+		<th>Tingkatan</th>
+		<th>Nama Kelas</th>
+		<th>Guru Subjek</th>
+		<th>Tukar Guru Baru</th>
+		<th>Tindakan</th>
 	</tr>
 <tr> 
 <!-- borang untuk mendaftar kelas baru -->

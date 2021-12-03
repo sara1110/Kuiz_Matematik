@@ -67,11 +67,11 @@ if(!empty($_POST))
 <?PHP include ('../butang_saiz.php'); ?>
 <table width='100%' border='1' id='besar'>
     <tr>
-        <td>Nama Murid</td>
-        <td>Nokp Murid</td>
-        <td>katalaluan Murid</td>
-        <td>Kelas</td>
-        <td>tindakan</td>       
+        <th>Nama Murid</th>
+        <th>Nokp Murid</th>
+        <th>katalaluan Murid</th>
+        <th>Kelas</th>
+        <th>tindakan</th>       
     </tr>
     <tr>
     <!-- borang untuk mendaftar murid baru -->
